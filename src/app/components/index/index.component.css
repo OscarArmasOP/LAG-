@@ -1,0 +1,44 @@
+.banner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background: #222;
+    color: #eeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.opciones-usuario {
+    margin: auto 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.opciones-usuario div {
+    margin: auto 15px;
+}
+
+.logout {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.content-admin {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    bottom: 0px;
+    right: 0pc;
+    overflow: hidden;
+    background: #444;
+}
+
+.datos {
+    margin-top: 17px;
+    margin-right: 100px;
+    width: 75%;
+    text-align: center;
+}

@@ -1,0 +1,121 @@
+<div class="content-home">
+    <div class="menu">
+        <div class="inicio" [routerLink]="['/index/inicio']">
+            INICIO
+        </div>
+        <div class="municipios" [routerLink]="['/index/home/1']">
+            MUNICIPIOS
+        </div>
+        <div class="soluciones" [routerLink]="['/index/soluciones']">
+            SOLUCIONES
+        </div>
+        <div class="preguntas" [routerLink]="['/index/preguntas']">
+            PREGUNTAS
+        </div>
+    </div>
+    <div class="fotografia" *ngFor="let fotografia of fotografias;">
+
+        <div class="fotografia-item" [@mover-fotografias]="direccion" *ngIf="fotografia_seleccionada.fotografia.numero==fotografia.numero" [style.background-image]="'url('+ url +'get-fotografia/'+ fotografia.imagen + '/false)'">
+            <div class="data-fotografia" *ngIf="!ver_mas">
+                {{fotografia.fotografia}}
+            </div>
+
+            <div class="leer-mas">
+                <div class="btn-leer-mas" (click)="ver_mas=!ver_mas">
+                    <mat-icon>add</mat-icon>
+                </div>
+                <div class="text-leer-mas">Leer más</div>
+                <div class="linea-inferior"></div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="content-flechas-nav">
+    <div class="move-left" *ngIf="fotografia_seleccionada.anterior" [routerLink]="['/index/home',fotografia_seleccionada.anterior]">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </div>
+    <div class="move-right" *ngIf="fotografia_seleccionada.siguiente" [routerLink]="['/index/home',fotografia_seleccionada.siguiente]">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </div>
+</div>
+
+<div class="ver-mas" *ngIf="ver_mas" (click)="ver_mas=!ver_mas">
+    <div class="ver-mas-detalle col-lg-6 col-md-6 col-xs-10">
+        <div class="ver-mas-nombre">{{fotografia_seleccionada.fotografia.fotografia}}</div>
+        <div class="ver-mas-descripcion">{{fotografia_seleccionada.fotografia.descripcion}}</div>
+
+        <div class="ver-mas-autor">
+            <div class="ver-autor" (click)="ver_autor=!ver_autor">{{fotografia_seleccionada.fotografia.autor}}</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ver-autor-div" *ngIf="ver_autor" (click)="ver_autor=!ver_autor">
+    <div *ngIf="fotografia_seleccionada.fotografia.autor=='Oscar Armas'" class="ver-mas-detalle-autor col-lg-6 col-md-6 col-xs-10">
+        <div class="perfil col-lg-2 col-md-3 col-sm-4">
+            <div class="content-fotografiaa">
+                <div class="fotografia">
+                    <img src="../../../assets/img/oscar.jpg" class="img-thumbnail" width="300px" height="300px">
+                </div>
+            </div>
+            <div class="datos">
+                <div class="nombre"><b>Autor:</b> Oscar Armas</div>
+                <div class="edad"><b>Edad:</b> 22</div>
+                <div class="profesion"><b>Profesion:</b> Licenciado en Psicología</div>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="fotografia_seleccionada.fotografia.autor=='Andrea Miranda'" class="ver-mas-detalle-autor col-lg-6 col-md-6 col-xs-10">
+        <div class="perfil col-lg-2 col-md-3 col-sm-4">
+            <div class="content-fotografiaa">
+                <div class="fotografia">
+                    <img src="../../../assets/img/andrea.jpg" class="img-thumbnail" width="300px" height="300px">
+                </div>
+            </div>
+            <div class="datos">
+                <div class="nombre"><b>Autor:</b> Andrea Miranda</div>
+                <div class="edad"><b>Edad:</b> 23</div>
+                <div class="profesion"><b>Profesion:</b> Licenciado en Pedagogía</div>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="fotografia_seleccionada.fotografia.autor=='Sofia Dominguez'" class="ver-mas-detalle-autor col-lg-6 col-md-6 col-xs-10">
+        <div class="perfil col-lg-2 col-md-3 col-sm-4">
+            <div class="content-fotografiaa">
+                <div class="fotografia">
+                    <img src="../../../assets/img/sofi.jpg" class="img-thumbnail" width="300px" height="300px">
+                </div>
+            </div>
+            <div class="datos">
+                <div class="nombre"><b>Autor:</b> Sofia Dominguez</div>
+                <div class="edad"><b>Edad:</b> 22</div>
+                <div class="profesion"><b>Profesion:</b> Licenciada en Pedagogía</div>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="fotografia_seleccionada.fotografia.autor=='Pedro Jimenez'" class="ver-mas-detalle-autor col-lg-6 col-md-6 col-xs-10">
+        <div class="perfil col-lg-2 col-md-3 col-sm-4">
+            <div class="content-fotografiaa">
+                <div class="fotografia">
+                    <img src="../../../assets/img/perfil.png" class="img-thumbnail" width="300px" height="300px">
+                </div>
+            </div>
+            <div class="datos">
+                <div class="nombre"><b>Autor:</b> Pedro Jimenez</div>
+                <div class="edad"><b>Edad:</b> 26</div>
+                <div class="profesion"><b>Profesion:</b> Licenciada en Comunicaciones</div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

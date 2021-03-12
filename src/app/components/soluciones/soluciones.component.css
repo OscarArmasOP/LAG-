@@ -1,0 +1,74 @@
+/* BARRA DE MENU */
+
+
+/* BARRA DE MENU */
+
+.menu {
+    position: relative;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #333333;
+    z-index: 6;
+}
+
+.menu div {
+    outline: none;
+    margin-left: 235px;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    /*margin: auto 90px;*/
+    display: flex;
+    transition: all .2s linear;
+    font-family: 'Roboto-Thin';
+    font-size: 1.5em;
+    color: snow;
+    cursor: pointer;
+}
+
+.menu div:hover {
+    transform: scale(1.4);
+}
+
+.info {
+    background: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    z-index: 6;
+}
+
+.content {
+    font-family: 'Roboto-Thin';
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.subHeader {
+    font-family: 'Roboto';
+    font-size: 28px;
+    padding: 5px;
+}
+
+.center {
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+}
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    background: rgb(204, 200, 200);
+}

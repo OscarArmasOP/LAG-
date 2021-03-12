@@ -1,0 +1,22 @@
+<div class="banner">
+    <div class="home" [routerLink]="['/index/inicio']">
+        <mat-icon>home</mat-icon>
+    </div>
+    <div class="opciones-usuario">
+        <div class="datos">
+            <b>usuario:</b>{{identity.usuario}}
+        </div>
+        <div class="logout" (click)="logout()">
+            Cerrar cesion
+        </div>
+    </div>
+
+</div>
+
+<div class="content-admin">
+    <router-outlet>
+        <!--Se van a renderizar los componentes creados.-->
+
+    </router-outlet>
+
+</div>
